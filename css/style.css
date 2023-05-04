@@ -2,7 +2,14 @@
     background-color: rgb(43, 48, 58);
 }
 
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
 p1{
     color: white;
-    font-size:10em;
+    font-size:3em;
 }

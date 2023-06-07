@@ -14,8 +14,8 @@
     --auxiliary-color2: #cacfd6;
 
     /*fontes*/
-    --fonte-primaria: 'Poppins', sans-serif;;
-    --fonte-secundaria: ;
+    --fonte-primaria: 'Poppins', sans-serif;
+    --fonte-secundaria: 'Lexend Deca', sans-serif;
 }
 
 head{
@@ -71,6 +71,38 @@ body{
     cursor: pointer;
 }
 
+/*~~~~ MAIN ~~~~*/
+
 main{
-    display: block;
+    margin: 4em;
+}
+
+.entrada{
+    font-family: var(--fonte-secundaria);
+    display: grid;
+}
+
+.nome{
+    font-size: 3em;
+    grid-column: 1/4;
+    row-gap: 1;
+}
+
+.titulo{
+    font-size: 15em;
+    font-weight: 700;
+    grid-column: 2/5;
+}
+
+.descricao{
+    font-size: 3em;
+    grid-column: 4/5;
+    row-gap: 4;
+}
+
+/*~~~~ Projetos ~~~~*/
+
+.projeto__titulo{
+    font-size: 3em;
+    font-weight: bold;
 }

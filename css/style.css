@@ -5,10 +5,12 @@
 :root{
 
     /*cores*/
-    --background-color: #424874;
+    --main-background-color: #3d5a80;
+    --background-color: #9ed3f0;
 
-    --primary-color: #a6b1e1;
-    --secundary-color: #d6e5e3;
+    --primary-color: #293241;
+    --secondary-color: #ee6c4d;
+    --tertiary-color: #e0fbfc;
 
     --auxiliary-color1: #dcd6f7;
     --auxiliary-color2: #cacfd6;
@@ -16,10 +18,6 @@
     /*fontes*/
     --fonte-primaria: 'Poppins', sans-serif;
     --fonte-secundaria: 'Lexend Deca', sans-serif;
-}
-
-head{
-    display: none;
 }
 
 html{
@@ -30,36 +28,34 @@ html{
 /*~~~~ BODY ~~~~*/
 
 body{
-    font-size: 100%;
-    font-style: normal;
     font-family: var(--fonte-primaria);
-    text-rendering: optimizeLegibility;
-    color: var(--secundary-color);
-    scrollbar-width: thin;
-    scrollbar-color: var(--auxiliary-color1) transparent;
-    margin: 0px;
     display: block;
-    background-color: var(--background-color);
-    padding: 0 12em;
 }
 
 
 /*~~~~ HEADER ~~~~*/
 
+header{
+    background-color: var(--main-background-color);
+    padding: 1em 11em;
+}
+
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.7em;
+    padding: 1rem 2em;
 }
 
 .navbar{
     display: flex;
-    gap: 10em;
+    gap: 5em;
 }
 
 .menu__item a{
     transition: .5s;
-    color: var(--secundary-color);
+    color: var(--tertiary-color);
     text-decoration: none;
 }
 
@@ -69,15 +65,16 @@ body{
 
 .menu__logo{
     cursor: pointer;
+    max-width: 9%;
+    max-height: 9%;
 }
 
 /*~~~~ MAIN ~~~~*/
 
-main{
-    margin: 4em;
-}
-
 .entrada{
+    padding: 10em 11em 1em;
+    background-color: var(--main-background-color);
+    color: var(--tertiary-color);
     font-family: var(--fonte-secundaria);
     display: grid;
 }
@@ -91,18 +88,80 @@ main{
 .titulo{
     font-size: 15em;
     font-weight: 700;
-    grid-column: 2/5;
+    grid-column: 2/6;
 }
 
 .descricao{
     font-size: 3em;
-    grid-column: 4/5;
+    grid-column: 4/6;
     row-gap: 4;
+}
+
+/*~~~~ Gradiente ~~~~*/
+.espaco{
+    padding: 10em;
+    background: rgb(61,90,128);
+    background: linear-gradient(180deg, rgba(61,90,128,1) 0%, #9ed3f0 100%);
 }
 
 /*~~~~ Projetos ~~~~*/
 
+.projetos{
+    padding: 0 10em;
+    background-color: var(--background-color);
+    width: 100%;
+}
+
 .projeto__titulo{
+    color: var(--secondary-color);
+    font-family: var(--fonte-secundaria);
+    font-size: 5em;
+    font-weight: bolder;
+    padding: 1em;
+
+    display: flex;
+    justify-content: center;
+}
+
+.projeto_exibicao{
+    padding: 1em 0 5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+#projeto1{
+    grid-column: 1/2;
+    width: 40em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+#projeto2{
+    grid-column: 4/5;
+    width: 40em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.projeto_nome{
     font-size: 3em;
     font-weight: bold;
+}
+
+.projeto_gif1{
+    width: 40%;
+    height: auto;
+}
+
+.projeto_gif2{
+    width: 40%;
+    height: auto;
+}
+
+.projeto_descricao{
+    font-size: 1.5em;
 }
